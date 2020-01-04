@@ -4,22 +4,26 @@
       <a href="#" class="navbar-brand">Recipe Book</a>
     </div>
 
-    <div class="nav">
+    <div class="nav" >
         <ul class="nav navbar">
-          <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
-          <li><a href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
+          <li style="padding-right:12px;">
+            <a href="#" (click)="onSelect('recipe')">Recipes</a>
+          </li>
+          <li style="padding-right:12px;">
+            <a href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+          </li>
        </ul>
     </div>
     <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
+        <li class="dropdown" appDropdown #r="appDropdown">
           <a href="#" class="dropdown-toggle" role="button">
             Manage <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}">
             <li><a href="#">Save Date</a></li>
             <li><a href="#">Fetch Data</a></li>
           </ul>
         </li>
-      </ul>
+    </ul>
   </div>
 </nav>

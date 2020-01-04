@@ -10,10 +10,10 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[] = [
     new Recipe('Burrito',
-    'This is a test1',
+    'Yummy Burrito',
     'https://upload.wikimedia.org/wikipedia/commons/4/4c/Breakfast_burritos.jpg'),
     new Recipe('Pancake',
-    'This is a test2',
+    'Delicious Pancake',
     'https://upload.wikimedia.org/wikipedia/commons/4/43/Blueberry_pancakes_%283%29.jpg')
   ];
 
