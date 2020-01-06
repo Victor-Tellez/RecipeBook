@@ -1,17 +1,28 @@
 import { EventEmitter } from '@angular/core';
 
 import { Recipe } from './recipe.model';
+import { Ingredient } from '../shared/ingredient.model';
 
 export class RecipeService {
   recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe('Burrito',
-    'Yummy Burrito',
-    'https://upload.wikimedia.org/wikipedia/commons/4/4c/Breakfast_burritos.jpg'),
+               'Yummy Burrito',
+               'https://upload.wikimedia.org/wikipedia/commons/4/4c/Breakfast_burritos.jpg',
+               [
+                 new Ingredient('Meat',1),
+                 new Ingredient('Pinto Beans',35),
+                 new Ingredient('Rice',5)
+               ]),
     new Recipe('Pancake',
-    'Delicious Pancake',
-    'https://upload.wikimedia.org/wikipedia/commons/4/43/Blueberry_pancakes_%283%29.jpg')
+               'Delicious Pancake',
+               'https://upload.wikimedia.org/wikipedia/commons/4/43/Blueberry_pancakes_%283%29.jpg',
+               [
+                 new Ingredient('Flour',100),
+                 new Ingredient('Eggs',4),
+                 new Ingredient('Blue berries',7)
+               ])
   ];
 
   getRecipes(){
