@@ -35,11 +35,7 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
-<<<<<<< HEAD
   addIngredientsToShoppingList(ingredients: Ingredient[]){
-=======
-  addIngredientsToShoppingList(ingredients: Ingredients[]){
->>>>>>> 16cc2dc9d27a2abbeecc8a61198ad1fbfd8c87eb
     this.slService.addIngredients(ingredients);
   }
 }
